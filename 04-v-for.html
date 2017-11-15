@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>v-for</title>
+</head>
+<body>
+<div id="app">
+	<ol>
+		<li v-for="todo in todos">{{todo.text}}</li>
+	</ol>
+</div>
+</body>
+<script src="https://unpkg.com/vue"></script>
+<script>
+var app = new Vue({	
+	el:'#app',
+	data:{	
+		todos:[
+			{text:'今天'},
+			{text:'明天'},
+			{text:'后天'}
+		]
+	}
+})
+</script>
+</html>

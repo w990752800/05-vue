@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vue组件</title>
+</head>
+<body>
+	<div id='app'>
+	<ol>
+		<todo-item
+		v-for="item in List"
+		v-bind:todo="item"
+		v-bind:key="item.id"
+		 >
+		 </todo-item>
+	</ol>
+	</div>
+</body>
+<script src="https://unpkg.com/vue"></script>
+<script>
+/* 组件  */
+Vue.component('todo-item',{	
+	props:['todo'],
+	template:'<li>{{ todo.text }}</li>'
+})
+
+var app = new Vue({
+	el:'#app',
+	data:{	
+		List:[	
+			{id:0,text:'水果'},
+			{id:1,text:'蔬菜'},
+			{id:2,text:'肉'}
+		]
+	}
+
+})
+</script>
+</html>

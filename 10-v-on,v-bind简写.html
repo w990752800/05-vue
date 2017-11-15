@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="app">
+		<p :id="a">12334</p>
+		<button @click="todo">12345</button>
+	</div>
+</body>
+<script src="https://unpkg.com/vue"></script>
+<script>
+var app = new Vue({	
+	el:'#app',
+	data:{	
+		a:2
+	},
+	methods:{	
+		todo: function(){	
+			this.a = 4444
+		}
+	}
+})
+</script>
+</html>

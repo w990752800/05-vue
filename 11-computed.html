@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>computed</title>
+</head>
+<body>
+	<div id="app">
+		<p>{{message}}</p>
+		<p>{{ reverseMessage }}</p>
+	</div>
+</body>
+<script src="https://unpkg.com/vue"></script>
+<script>
+var app = new Vue({	
+	el:'#app',
+	data:{	
+		message:'hellow vue'
+	},
+	computed:{	
+		reverseMessage: function(){	
+			return this.message.split('').reverse().join('')
+
+		}
+	}
+})
+</script>
+</html>

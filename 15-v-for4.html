@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <ol v-for="(value,key,index) in objects">
+        <li>{{ value }},{{ key }},{{ index }}</li>
+    </ol>
+</div>
+<script src="vue.js"></script>
+<script>
+    var app = new Vue({
+        el:'#app',
+        data:{
+            objects:{
+                xiaomeing:'qqq',
+                xiaofang:124,
+                xiaoli:'eeee'
+
+            }
+        }
+
+    })
+</script>
+</body>
+</html>

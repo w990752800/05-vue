@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>class</title>
+</head>
+<body>
+	<div id="app">
+	<p class="static" :class="{error:i,success:e}">asdfaf</p>
+	</div>
+</body>
+<script src="https://unpkg.com/vue"></script>
+<script>
+var app = new Vue({	
+	el:'#app',
+	data:{
+		i:true,
+		e:false
+
+	}
+})
+</script>
+</html>
